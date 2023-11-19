@@ -46,6 +46,7 @@ body{
 /* My Learning*/
 .mylearning{
     position: relative;
+    cursor: pointer;
 }
 .mylearning__popup{
     position: absolute;
@@ -71,6 +72,14 @@ body{
     color: white;
     padding: 10px;
     border-radius: 30px;
+    border: solid #A435F0 1px;
+    cursor: pointer;
+}
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color:black;
+    border: solid #A435F0 1px;
 }
 .sale-img{
     position: relative;
@@ -86,6 +95,20 @@ body{
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .recommended{
     padding: 10px;
